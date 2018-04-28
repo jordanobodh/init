@@ -7,7 +7,6 @@ import java.util.Arrays;
  */
 public class Sort {
     public int[] insertionSort(int[] array) {
-        System.out.println(Arrays.toString(array));
         for(int i=1; i<array.length; i++) {
             int key = array[i];
             int j = i - 1;
@@ -19,5 +18,27 @@ public class Sort {
             i = j + 1;
         }
         return array;
+    }
+
+    public int[] selectionSort(int[] array) {
+        for(int i=0; i < array.length; i++ ){
+            int temp = array[i];
+            int minIndex = minIndex(array, i);
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+        }
+        return array;
+    }
+
+    public int minIndex(int[] array, int startIndex) {
+        int min = array[startIndex];
+        int minIndex = startIndex;
+        for(int i=startIndex+1; i < array.length; i++){
+            if(array[i] < min) {
+                min  = array[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
     }
 }

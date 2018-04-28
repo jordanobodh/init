@@ -1,6 +1,7 @@
 package genpackage;
 
 import algos.Sort;
+import clrs.ChapTwo;
 import mathfunimpl.NumberTheory;
 
 import java.io.BufferedReader;
@@ -29,10 +30,14 @@ public class GenOb {
 //
 //        System.out.println(Arrays.toString(strArray));
 
-        int[] array = {3, 4, 1, 2, 6};
+        int[] array = {31, 41, 59, 26, 41, 58};
         Sort sort = new Sort();
-        System.out.println(Arrays.toString(sort.insertionSort(array)));
+        System.out.println(Arrays.toString(sort.selectionSort(array)));
 
+//        ChapTwo chapTwo = new ChapTwo();
+//        int[] array = {1};
+//        int[] res = chapTwo.addBinaryArrays(array, array);
+//        System.out.println(Arrays.toString(res));
     }
 
     public Integer[] toIntArray(String[] strArray){
